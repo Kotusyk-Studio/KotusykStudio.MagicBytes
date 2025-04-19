@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KotusykStudio.MagicBytes", "KotusykStudio.MagicBytes\KotusykStudio.MagicBytes.csproj", "{E3B86A9C-51D5-497D-AA5D-2B7BAFBC312C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KotusykStudio.MagicBytes.UnitTests", "KotusykStudio.MagicBytes.UnitTests\KotusykStudio.MagicBytes.UnitTests.csproj", "{030B53ED-7217-4C0D-AD9C-8C88DC76875A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E3B86A9C-51D5-497D-AA5D-2B7BAFBC312C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3B86A9C-51D5-497D-AA5D-2B7BAFBC312C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3B86A9C-51D5-497D-AA5D-2B7BAFBC312C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{030B53ED-7217-4C0D-AD9C-8C88DC76875A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{030B53ED-7217-4C0D-AD9C-8C88DC76875A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{030B53ED-7217-4C0D-AD9C-8C88DC76875A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{030B53ED-7217-4C0D-AD9C-8C88DC76875A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
