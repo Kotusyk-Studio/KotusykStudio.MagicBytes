@@ -7,6 +7,27 @@ public static class ByteSniffer
     private const string _relsFile = "_rels/.rels";
     private const string _wordDocumentFile = "word/document.xml";
     private const string _workbookFile = "xl/workbook.xml";
+
+    /// <summary>
+    /// Try to get file extension by magic numbers in byte array.
+    /// </summary>
+    /// <param name="fileBytes">your file</param>
+    /// <param name="extension">founded extension<br/>
+    /// if unable to identify extension then variable will be ".unknown"</param>
+    /// <returns>true if extension was successfully found<br/>
+    /// false if extension is unknown</returns>
+    public static bool TryGetFileExtension(byte[] fileBytes, out string extension)
+    {
+        extension = GetFileExtension(fileBytes);
+        return extension != Extensions.Unknown;
+    }
+
+    /// <summary>
+    /// Get file extension by magic numbers in byte array.
+    /// </summary>
+    /// <param name="fileBytes">your file</param>
+    /// <returns>string extension with dot at beginning <br/>
+    /// if unable to identify extension then return ".unknown"</returns>
     public static string GetFileExtension(byte[] fileBytes)
     {
         foreach (var magicNumber in _magicNumbersExtensions)
@@ -50,7 +71,7 @@ public static class ByteSniffer
     }
 
     private static readonly Dictionary<byte[], (string extension, int offset)> _magicNumbersExtensions = new()
-    {
+        {
             #region Images
 
             { new byte[3] { 255, 216, 255 }, (Extensions.Jpg, 0) },
@@ -99,5 +120,5 @@ public static class ByteSniffer
             { new byte[6] { 55, 122, 188, 175, 39, 28}, (Extensions.SevenZ, 0) }
 
             #endregion
-    };
+        };
 }
