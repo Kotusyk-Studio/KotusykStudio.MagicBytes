@@ -1,4 +1,4 @@
-﻿namespace KotusykStudio.MagicBytes;
+﻿namespace KotusykStudio.MagicBytes.TypesExtensions;
 
 public static class ByteArrayExtensions
 {
@@ -12,8 +12,8 @@ public static class ByteArrayExtensions
     /// false if extension is unknown</returns>
     public static bool TryGetFileExtension(this byte[] fileBytes, out string extension)
     {
-        extension = GetFileExtension(fileBytes);
-        return extension != Extensions.Unknown;
+        extension = fileBytes.GetFileExtension();
+        return extension != FileExtensions.Unknown;
     }
 
     /// <summary>

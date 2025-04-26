@@ -1,6 +1,6 @@
 ﻿namespace KotusykStudio.MagicBytes;
 
-public static class Extensions
+public static class FileExtensions
 {
     #region Images
 
